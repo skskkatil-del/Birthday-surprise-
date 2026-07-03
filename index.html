@@ -163,6 +163,36 @@ function createHeart() {
 }
 
 setInterval(createHeart, 300);
+    // 🎉 Confetti Effect
+function createConfetti() {
+    const confetti = document.createElement("div");
+    confetti.innerHTML = ["🎉","✨","🎊","💖","🌸"][Math.floor(Math.random()*5)];
+
+    confetti.style.position = "fixed";
+    confetti.style.left = Math.random() * window.innerWidth + "px";
+    confetti.style.top = "-20px";
+    confetti.style.fontSize = (16 + Math.random() * 18) + "px";
+    confetti.style.pointerEvents = "none";
+    confetti.style.zIndex = "9999";
+
+    const duration = 3000 + Math.random() * 2000;
+
+    confetti.animate([
+        { transform: "translateY(0px) rotate(0deg)", opacity: 1 },
+        { transform: `translateY(${window.innerHeight + 50}px) rotate(720deg)`, opacity: 0 }
+    ], {
+        duration: duration,
+        easing: "linear"
+    });
+
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+        confetti.remove();
+    }, duration);
+}
+
+setInterval(createConfetti, 250);
 </script>
 </body>
 </html>

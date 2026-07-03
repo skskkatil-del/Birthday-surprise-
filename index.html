@@ -71,10 +71,12 @@ setInterval(() => {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("countdown").innerHTML =
-    "🎂 Next Birthday In ❤️<br>" +
-    days + " Days " + hours + " Hours " + minutes + " Minutes";
-}, 1000);
+  document.getElementById("countdown").innerHTML =
+"<div style='font-size:34px'>🎂</div>" +
+"<div style='font-size:28px;font-weight:bold;margin:10px 0;'>Next Birthday In ❤️</div>" +
+"<div style='font-size:22px;'>" +
+days + " Days " + hours + " Hours " + minutes + " Minutes" +
+"</div>";  
 </script>
 </div>
 

@@ -65,7 +65,28 @@ cursor:pointer;
                     0 0 60px #ff1493,
                     0 0 90px #ff66b3;
     }
+}@keyframes glow{
+    from{
+        box-shadow: 0 0 5px rgba(255,255,255,0.4),
+                    0 0 10px rgba(255,105,180,0.3);
+    }
+    to{
+        box-shadow: 0 0 10px rgba(255,255,255,0.6),
+                    0 0 20px rgba(255,105,180,0.5);
+    }
 }
+
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+  }
 </style>
 </head> 
 <body>

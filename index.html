@@ -58,27 +58,7 @@ Aaj ka din sirf tumhare naam. ❤️
 <h2>❤️ I Hope You Always Keep Smiling ❤️</h2>
 <br>
 
-<p id="countdown" style="font-size:22px;font-weight:bold;"></p>
-
-<script>
-const nextBirthday = new Date("2027-07-03 00:00:00").getTime();
-
-setInterval(() => {
-    const now = new Date().getTime();
-    const distance = nextBirthday - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-  document.getElementById("countdown").innerHTML =
-"<div style='font-size:34px'>🎂</div>" +
-"<div style='font-size:28px;font-weight:bold;margin:10px 0;'>Next Birthday In ❤️</div>" +
-"<div style='font-size:22px'>" +
-days + " Days " + hours + " Hours " + minutes + " Minutes" +
-"</div>";
-
-</script>
+<p 
 </div>
 
 </body>

@@ -6,7 +6,117 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-<style>
+<style>.cake{
+    position:relative;
+    width:180px;
+    height:220px;
+    margin:30px auto;
+}
+
+.plate{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:200px;
+    height:14px;
+    background:#ffffff;
+    border-radius:50px;
+    box-shadow:0 0 20px rgba(255,255,255,.8);
+}
+
+.layer{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:160px;
+    height:40px;
+    border-radius:12px;
+}
+
+.layer-bottom{
+    bottom:14px;
+    background:#ff9ac8;
+}
+
+.layer-middle{
+    bottom:54px;
+    background:#ff7eb6;
+}
+
+.layer-top{
+    bottom:94px;
+    background:#ff5ea8;
+}
+
+.icing{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:124px;
+    width:170px;
+    height:18px;
+    background:white;
+    border-radius:20px;
+}
+
+.drip{
+    position:absolute;
+    background:white;
+    width:14px;
+    border-radius:10px;
+}
+
+.drip1{
+    height:26px;
+    left:55px;
+    bottom:104px;
+}
+
+.drip2{
+    height:36px;
+    left:88px;
+    bottom:94px;
+}
+
+.drip3{
+    height:24px;
+    left:122px;
+    bottom:106px;
+}
+
+.candle{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:142px;
+    width:10px;
+    height:42px;
+    background:#ffffff;
+    border-radius:10px;
+}
+
+.flame{
+    position:absolute;
+    top:-16px;
+    left:50%;
+    transform:translateX(-50%);
+    width:16px;
+    height:16px;
+    background:gold;
+    border-radius:50%;
+    box-shadow:0 0 20px gold;
+    animation:flicker .4s infinite alternate;
+}
+
+@keyframes flicker{
+    from{
+        transform:translateX(-50%) scale(1);
+    }
+    to{
+        transform:translateX(-50%) scale(1.2);
+    }
+}
 body{
 margin:0;
 font-family:Arial,sans-serif;
@@ -139,7 +249,23 @@ button{
 
  <h2>From Your Best Friend Sahil ❤️</h2>
 <img src="Screenshot_20260703_213117.jpg" style="width:300px; border-radius:20px; margin:20px 0;">
-<p>
+<div class="cake">
+  <div class="plate"></div>
+
+  <div class="layer layer-bottom"></div>
+  <div class="layer layer-middle"></div>
+  <div class="layer layer-top"></div>
+
+  <div class="icing"></div>
+
+  <div class="drip drip1"></div>
+  <div class="drip drip2"></div>
+  <div class="drip drip3"></div>
+
+  <div class="candle">
+    <div class="flame"></div>
+  </div>
+</div>
 Happy Birthday meri sabse special Arfuuuu 💖.<br><br>
 Main dua karta hoon ki tum hamesha khush raho,
 hamesha smile karti raho aur tumhari har wish puri ho.

@@ -255,11 +255,49 @@ button{
 
 </style>
 <style>
+#giftScreen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#ff69b4,#ff1493);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
 
+.gift-box{
+    font-size:100px;
+    cursor:pointer;
+    animation:giftBounce 1s infinite;
+}
+
+#giftScreen h2{
+    color:white;
+    margin-top:20px;
+    font-size:28px;
+    text-shadow:0 0 10px white;
+}
+
+@keyframes giftBounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
 </style>
 </head>
 <body>
+<div id="giftScreen">
+  <div class="gift-box" onclick="openGift()">
+    🎁
+  </div>
 
+  <h2>Tap the Gift to Open Your Surprise 💖</h2>
+</div>
+
+<div id="mainContent" style="display:none;">
 
 <div class="card">
 <h1 class="typing" style="font-family:'Great Vibes', cursive;">
@@ -354,5 +392,6 @@ function createConfetti() {
 
 setInterval(createConfetti, 250);
 </script>
+</div>
 </body>
 </html>
